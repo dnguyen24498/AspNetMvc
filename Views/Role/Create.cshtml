@@ -1,0 +1,16 @@
+﻿@model AddRoleRequest
+@{
+    Layout = "_Layout";
+}
+<div class="container">
+    <p class="btn btn-success text-white m-1 p-1">Trang tạo role<p />
+    <form method="post" asp-controller="Role" asp-action="Create">
+        <div class="form-group">
+            <label class="text-white">Tên role:</label>
+            <input type="tel" class="form-control" asp-for="RoleName" placeholder="Nhập tên role">
+        </div>
+        <span class="row text-danger" asp-validation-for="RoleName"></span>
+        <button type="submit" class="row btn btn-success">Tạo role</button>
+    </form>
+</div>
+

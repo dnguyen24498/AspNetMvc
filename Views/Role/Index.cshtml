@@ -1,0 +1,25 @@
+﻿@model List<UserRoleResponse>
+@{ 
+    Layout = "_Layout";
+}
+
+    <table class="text-white table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Tên tài khoản</th>
+                <th scope="col">Thuộc quyền</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var userRole in Model)
+            {
+                <tr>
+                    <td>@userRole.UserName</td>
+                    <td>@string.Join(", ",userRole.Roles)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+["a","b","c"]
+a,b,c
